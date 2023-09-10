@@ -28,6 +28,6 @@ The designs were created to the following widths:
 - Font size (paragraph): 15px
 
 ### Font
-
+- font-family: 'Overpass', sans-serif;
 - Family: [Overpass](https://fonts.google.com/specimen/Overpass)
 - Weights: 400, 700

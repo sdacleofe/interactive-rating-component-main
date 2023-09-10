@@ -1,6 +1,6 @@
 # Frontend Mentor - Interactive rating component solution
 
-This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -11,12 +11,7 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -31,15 +26,41 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+## Desktop Preview
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+---
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+![](./design/desktop-preview-f.png)
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+## Desktop Preview States
 
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+---
+
+![](./design/active-states-f.png)
+
+## Desktop Thank You State
+
+---
+
+![](./design/desktop-thank-you-state-f.png)
+
+## Mobile Preview
+
+---
+
+![](./design/mobile-preview-f.png)
+
+## Mobile Preview States
+
+---
+
+![](./design/mobile-active-states-f.png)
+
+## Mobile Thank You State
+
+---
+
+![](./design/mobile-thank-you-state-f.png)
 
 ### Links
 
@@ -52,62 +73,67 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
+- FlexBox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- ESLint
+- StyleLint
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Finished my day with this Interactive Rating Component using HTML5, CSS, and JS ES6 which incorporate with ES6 feature and standard syntax working with DOM and event handling. Plus, I have learned new things too, such as using the StyleLint and ESLint tools which is used for web development to ensure code quality and maintainability.
 
-To see how you can add code snippets, see below:
+Additionally, here are some of my code snippets.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+:root {
+  /* Primary */
+  --orange: hsl(25deg 97% 53%);
+
+  /* Neutral */
+  --white: hsl(0deg 0% 100%);
+  --light-grey: hsl(217deg 12% 63%);
+  --medium-grey: hsl(216deg 12% 54%);
+  --dark-blue: hsl(213deg 19% 18%);
+  --very-dark-blue: hsl(216deg 12% 8%);
 }
 ```
+
+Been using these custom properties for readability and efficiency while working on this project.
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+ratingNumberElements.forEach((ratingNumberElement) => {
+  ratingNumberElement.addEventListener('click', (e) => {
+    if (previousClickedElement) {
+      previousClickedElement.classList.remove('clicked')
+    }
+    e.target.classList.add('clicked')
+    selectedValue = e.target.getAttribute('data-value')
+    previousClickedElement = e.target
+  })
+})
+
+submitButton.addEventListener('click', () => {
+  if (selectedValue !== undefined && selectedValue !== null) {
+    userRatingModal.style.display = 'block'
+    successModal.style.display = 'none'
+  }
+
+  if (selectedValue.trim() !== '') {
+    userRatingModal.style.display = 'none'
+    successModal.style.display = 'block'
+    paragraphContent.innerText = `You selected ${selectedValue} out of 5`
+  }
+})
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Use single quotes instead of double quotes, and it is also fine to omit semicolon rules in JavaScript."
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [ChatGPT](https://chat.openai.com/) - This helped me for finding answers to my questions. I really liked this pattern and will use it going forward.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Shanice Cleofe](https://github.com/sdacleofe/about-me)
+- Frontend Mentor - [@sdacleofe](https://www.frontendmentor.io/profile/sdacleofe)

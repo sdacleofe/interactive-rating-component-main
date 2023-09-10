@@ -1,0 +1,10 @@
+@media screen and (max-width: 375px) {
+    section {
+        width: 280px;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 0.8em;
+    }
+}
