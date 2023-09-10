@@ -64,8 +64,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/sdacleofe/interactive-rating-component-main)
-- Live Site URL: [Add live site URL here](https://sdacleofe.github.io/interactive-rating-component-main/)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/interactive-rating-component-Kp7Qzt2OEL)
+- Live Site URL: [Interactive Rating Component Layout](https://sdacleofe.github.io/interactive-rating-component-main/)
 
 ## My process
 
